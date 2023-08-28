@@ -37,6 +37,6 @@ jobs:
             cd nodeapps/2023/project2/t1
             npm install
             sudo systemctl stop course-t1-backend
-            sudo cp course-backend.service /lib/systemd/system/course-t1-backend.service
+            sudo cp course-t1-backend.service /lib/systemd/system/course-t1-backend.service
             sudo systemctl daemon-reload
             sudo systemctl start course-t1-backend
