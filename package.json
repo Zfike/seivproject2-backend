@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "bundle": "mkdir deploy && cp -r config controllers models routes server.js package.json package-lock.json course-t1-backend.service deploy && rm deploy/config/db.config.js && mv deploy/config/prod.db.config.js deploy/config/db.config.js"
+    "bundle": "mkdir deploy && cp -r app server.js package.json package-lock.json course-t1-backend.service .env deploy"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
