@@ -35,9 +35,9 @@ exports.create = (req, res) => {
 
 // Retrieve all Courses from the database.
 exports.findAll = (req, res) => {
-  const name = req.query.name;
-  var condition = name ? { name: { [Op.like]: `%${name}%` } } : null;
-  Course.findAll({ where: condition })
+  // const name = req.query.name;
+  // var condition = name ? { name: { [Op.like]: `%${name}%` } } : null;
+  Course.findAll()
     .then((data) => {
       res.send(data);
     })
