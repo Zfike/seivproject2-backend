@@ -1,5 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
     const Course = sequelize.define("course", {
+
       dept: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -23,6 +24,8 @@ module.exports = (sequelize, Sequelize) => {
       description: {
         type: Sequelize.STRING,
       },
+      createdAt: { type: Sequelize.DATE, allowNull: true, defaultValue: sequelize.literal('CURRENT_TIMESTAMP') },
+      updatedAt: { type: Sequelize.DATE, allowNull: true, defaultValue: sequelize.literal('CURRENT_TIMESTAMP') }
     });
     return Course;
   };
