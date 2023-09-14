@@ -11,6 +11,7 @@ exports.create = (req, res) => {
     });
     return;
   }
+
   // Create a Course
   const course = {
     dept: req.body.dept,
@@ -20,6 +21,7 @@ exports.create = (req, res) => {
     name: req.body.name,
     description: req.body.description,
   };
+
   // Save Course in the database
   Course.create(course)
     .then((data) => {
@@ -70,6 +72,7 @@ exports.findAllForUser = (req, res) => {
       });
     });
 };
+
 // Find a single Course with an id
 exports.findOne = (req, res) => {
   const id = req.params.id;
@@ -89,6 +92,7 @@ exports.findOne = (req, res) => {
       });
     });
 };
+
 // Update a Course by the id in the request
 exports.update = (req, res) => {
   const id = req.params.id;
@@ -112,6 +116,7 @@ exports.update = (req, res) => {
       });
     });
 };
+
 // Delete a Course with the specified id in the request
 exports.delete = (req, res) => {
   const id = req.params.id;
@@ -135,6 +140,7 @@ exports.delete = (req, res) => {
       });
     });
 };
+
 // Delete all Courses from the database.
 exports.deleteAll = (req, res) => {
   Course.destroy({
